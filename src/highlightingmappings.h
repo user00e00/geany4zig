@@ -1618,6 +1618,45 @@ static const HLKeyword highlighting_keywords_YAML[] =
 };
 #define highlighting_properties_YAML	EMPTY_PROPERTIES
 
+/* Zig */
+#define highlighting_lexer_ZIG		SCLEX_ZIG
+static const HLStyle highlighting_styles_ZIG[] =
+{
+	{ SCE_ZIG_DEFAULT,				"default",					FALSE },
+	{ SCE_ZIG_COMMENTBLOCK,			"commentblock",				FALSE },
+	{ SCE_ZIG_COMMENTLINE,			"commentline",				FALSE },
+	{ SCE_ZIG_COMMENTBLOCKDOC,		"commentblockdoc",			FALSE },
+	{ SCE_ZIG_COMMENTLINEDOC,		"commentlinedoc",			FALSE },
+	{ SCE_ZIG_NUMBER,				"number",					FALSE },
+	{ SCE_ZIG_WORD,					"word",						FALSE },
+	{ SCE_ZIG_WORD2,				"word2",					FALSE },
+	{ SCE_ZIG_WORD3,				"word3",					FALSE },
+	{ SCE_ZIG_WORD4,				"word4",					FALSE },
+	{ SCE_ZIG_WORD5,				"word5",					FALSE },
+	{ SCE_ZIG_WORD6,				"word6",					FALSE },
+	{ SCE_ZIG_WORD7,				"word7",					FALSE },
+	{ SCE_ZIG_STRING,				"string",					FALSE },
+	{ SCE_ZIG_STRINGR,				"stringraw",				FALSE },
+	{ SCE_ZIG_CHARACTER,			"character",				FALSE },
+	{ SCE_ZIG_OPERATOR,				"operator",					FALSE },
+	{ SCE_ZIG_IDENTIFIER,			"identifier",				FALSE },
+	{ SCE_ZIG_LIFETIME,				"lifetime",					FALSE },
+	{ SCE_ZIG_MACRO,				"macro",					FALSE },
+	{ SCE_ZIG_LEXERROR,				"lexerror",					FALSE },
+	{ SCE_ZIG_BYTESTRING,			"bytestring",				FALSE },
+	{ SCE_ZIG_BYTESTRINGR,			"bytestringr",				FALSE },
+	{ SCE_ZIG_BYTECHARACTER,		"bytecharacter",			FALSE }
+};
+static const HLKeyword highlighting_keywords_ZIG[] =
+{
+	{ 0, "primary",		FALSE },
+	/* SCI_SETKEYWORDS = 1 - secondary + global tags file types */
+	{ 1, "secondary",	TRUE },
+	{ 2, "tertiary",	FALSE },
+	/* SCI_SETKEYWORDS = 3 is for current session types - see document_highlight_tags() */
+};
+#define highlighting_properties_ZIG		EMPTY_PROPERTIES
+
 
 /* Zephir */
 #define highlighting_lexer_ZEPHIR		SCLEX_PHPSCRIPT

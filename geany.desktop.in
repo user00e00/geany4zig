@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-_Name=Geany
+_Name=GeanyZIG
 _GenericName=Integrated Development Environment
 _Comment=A fast and lightweight IDE using GTK+
 Exec=geany %F

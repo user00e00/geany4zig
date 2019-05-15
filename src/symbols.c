@@ -566,6 +566,22 @@ static void add_top_level_items(GeanyDocument *doc)
 				NULL);
 			break;
 		}
+		case GEANY_FILETYPES_ZIG:
+		{
+			tag_list_add_groups(tag_store,
+				&(tv_iters.tag_namespace), _("Modules"), ICON_NAMESPACE,
+				&(tv_iters.tag_struct), _("Structures"), ICON_STRUCT,
+				&(tv_iters.tag_interface), _("Traits"), ICON_CLASS,
+				&(tv_iters.tag_class), _("Implementations"), ICON_CLASS,
+				&(tv_iters.tag_function), _("Functions"), ICON_METHOD,
+				&(tv_iters.tag_type), _("Typedefs / Enums"), ICON_STRUCT,
+				&(tv_iters.tag_variable), _("Variables"), ICON_VAR,
+				&(tv_iters.tag_macro), _("Macros"), ICON_MACRO,
+				&(tv_iters.tag_member), _("Field"), ICON_MEMBER,
+				&(tv_iters.tag_other), _("Tests"), ICON_OTHER,
+				NULL);
+			break;
+		}
 		case GEANY_FILETYPES_GO:
 		{
 			tag_list_add_groups(tag_store,

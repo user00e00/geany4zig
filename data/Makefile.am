@@ -71,7 +71,9 @@ filetypes = \
 	filedefs/filetypes.vhdl \
 	filedefs/filetypes.xml \
 	filedefs/filetypes.yaml \
-	filedefs/filetypes.zephir
+	filedefs/filetypes.zephir \
+	filedefs/filetypes.zig \
+	filedefs/filetypes.ZigBasicSupport.conf
 
 tagfiles = \
 	tags/std99.c.tags \
@@ -93,7 +95,8 @@ template_files = \
 	templates/files/main.py \
 	templates/files/main.vala \
 	templates/files/module.erl \
-	templates/files/program.pas
+	templates/files/program.pas \
+	templates/files/main.zig
 
 templates = \
 	templates/bsd \

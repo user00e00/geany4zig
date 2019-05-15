@@ -502,6 +502,8 @@ static TMParserMapEntry map_JSON[] = {
 	{'z', tm_tag_member_t},
 };
 
+
+
 /* Zephir, same as PHP */
 #define map_ZEPHIR map_PHP
 
@@ -509,6 +511,15 @@ static TMParserMapEntry map_JSON[] = {
 static TMParserMapEntry map_POWERSHELL[] = {
 	{'f', tm_tag_function_t},
 	{'v', tm_tag_variable_t},
+};
+
+static TMParserMapEntry map_ZIG[] = {
+	{'s', tm_tag_struct_t},
+	{'f', tm_tag_function_t},
+	{'g', tm_tag_enum_t},
+	{'v', tm_tag_variable_t},
+	{'t', tm_tag_other_t},
+	{'m', tm_tag_member_t},
 };
 
 
@@ -573,6 +584,7 @@ static TMParserMap parser_map[] = {
 	MAP_ENTRY(JSON),
 	MAP_ENTRY(ZEPHIR),
 	MAP_ENTRY(POWERSHELL),
+	MAP_ENTRY(ZIG),
 };
 /* make sure the parser map is consistent and complete */
 G_STATIC_ASSERT(G_N_ELEMENTS(parser_map) == TM_PARSER_COUNT);
@@ -746,6 +758,7 @@ const gchar *tm_parser_context_separator(TMParserType lang)
 		case TM_PARSER_POWERSHELL:
 		case TM_PARSER_RUST:
 		case TM_PARSER_ZEPHIR:
+		case TM_PARSER_ZIG:
 			return "::";
 
 		/* avoid confusion with other possible separators in group/section name */
@@ -789,6 +802,7 @@ gboolean tm_parser_has_full_context(TMParserType lang)
 		case TM_PARSER_TXT2TAGS:
 		case TM_PARSER_VALA:
 		case TM_PARSER_ZEPHIR:
+		case TM_PARSER_ZIG:
 			return TRUE;
 
 		/* These make use of the scope, but don't include nested hierarchy
